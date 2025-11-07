@@ -23,16 +23,17 @@ Classification: Rating scale of terrible/bad/neutral/good/great/excellent
 Model Type: Rule-Based Heuristic, Cecision tree (maybe), Random Forest (if there's time)
 
 ### Plan
-<img width="890" height="847" alt="image" src="https://github.com/user-attachments/assets/94d848d5-9d78-4b01-a707-01ced788f7e5" />
-- [] Initial Plan
-- [] Tech Stack/Repo Setup
-- [] Gather Data from API's
-- [] Store Data
-- [] Data Exploration/Cleaning
-- [] Feature Engineering
-- [] Baseline Model
-- [] Train Model
-- [] Tune Model
-- [] Evaluation of Model Prediction
-- [] Deploy with simple frontend
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/94d848d5-9d78-4b01-a707-01ced788f7e5" />
+
+- [x] Initial Plan
+- [ ] Tech Stack/Repo Setup
+- [ ] Gather Data from API's
+- [ ] Store Data
+- [ ] Data Exploration/Cleaning
+- [ ] Feature Engineering
+- [ ] Baseline Model
+- [ ] Train Model
+- [ ] Tune Model
+- [ ] Evaluation of Model Prediction
+- [ ] Deploy with simple frontend
 
