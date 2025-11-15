@@ -10,6 +10,7 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from src.data.collectors import LocationCollector, WeatherCollector
+from src.data.dataStorage import getWeatherFeatures
 
 def test_location_service():
     """Test the LocationService with various locations"""
@@ -43,12 +44,38 @@ def test_weather_collector():
     except Exception as e:
         print(f"❌ Error fetching moon cycle data: {e}")
 
+def test_dataStorage():
+    print("\nTesting DataStorage...")
+    location_name = "provo"
+
+    try:
+        data_cleaner = getWeatherFeatures(location_name)
+
+        date_time = data_cleaner.get_date_time()
+        temperature = data_cleaner.get_temperature()
+        humidity = data_cleaner.get_humidity()
+        precipitation = data_cleaner.get_precipitation()
+        precipitation_probability = data_cleaner.get_precipitation_probability()
+        precipitation_type = data_cleaner.get_precipitation_type()
+        wind_speed = data_cleaner.get_wind_speed()
+        pressure = data_cleaner.get_pressure()
+        cloud_cover = data_cleaner.get_cloud_cover()
+        visibility = data_cleaner.get_visibility()
+        uv_index = data_cleaner.get_uv_index()
+        sunrise = data_cleaner.get_sunrise()
+        sunset = data_cleaner.get_sunset()
+        moon_phase = data_cleaner.get_moon_phase()
+
+        print(f"✅ DataStorage fetched successfully: {date_time}, {temperature}F, {humidity}%, {precipitation}in, {precipitation_probability}%, {precipitation_type}, {wind_speed}mph, {pressure}mb, {cloud_cover}%, {visibility}mi, UV Index {uv_index}, Sunrise {sunrise}, Sunset {sunset}, Moon Phase {moon_phase}")
+    except Exception as e:
+        print(f"❌ Error testing DataStorage: {e}")
 
 if __name__ == "__main__":
     print("🚀 Starting LocationService Tests")
 
     # Run the tests
-    test_location_service()
-    test_weather_collector()
+    # test_location_service()
+    # test_weather_collector()
+    test_dataStorage()
 
     print("\n✨ All tests completed!")

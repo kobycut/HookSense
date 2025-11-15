@@ -82,33 +82,6 @@ class LocationCollector:
             }
         return us_state_abbrev.get(state_name.lower(), state_name)
 
-# class WeatherCollector:
-#     def get_weather_data(self, longitude: float, latitude: float):
-#         API_key = Config.OPENWEATHER_API_KEY
-#         api_call = f'https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={API_key}'
-#         try:
-#             response = requests.get(api_call)
-#             response.raise_for_status()
-#             return response.json()
-#         except Exception as e:
-#             print(f'Error fetching weather data for Lat {latitude}, Lon {longitude}: {e}')
-#             raise
-
-class TemperatureCollector:
-    pass
-
-class RainfallCollector:
-    pass
-
-class BarometricPressureCollector:
-    pass
-
-class WindSpeedCollector:
-    pass
-
-class CloudCoverCollector:
-    pass
-
 class WeatherCollector:
     def get_weather_data(self, city: str, state: str = '', country: str = ''):
         try:
