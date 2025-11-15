@@ -26,8 +26,8 @@ Model Type: Rule-Based Heuristic, Cecision tree (maybe), Random Forest (if there
 <img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/94d848d5-9d78-4b01-a707-01ced788f7e5" />
 
 - [x] Initial Plan
-- [ ] Tech Stack/Repo Setup
-- [ ] Gather Data from API's
+- [x] Tech Stack/Repo Setup
+- [x] Gather Data from API's
 - [ ] Store Data
 - [ ] Data Exploration/Cleaning
 - [ ] Feature Engineering
