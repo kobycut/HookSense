@@ -28,12 +28,12 @@ Model Type: Rule-Based Heuristic, Cecision tree (maybe), Random Forest (if there
 - [x] Initial Plan
 - [x] Tech Stack/Repo Setup
 - [x] Gather Data from API's
-- [ ] Store Data
-- [ ] Data Exploration/Cleaning
-- [ ] Feature Engineering
-- [ ] Baseline Model
-- [ ] Train Model
-- [ ] Tune Model
+- [x] Store Data
+- [x] Data Exploration/Cleaning
+- [x] Feature Engineering
+- [x] Baseline Model
+- [ ] Random Forest Model
+- [ ] Another Model
 - [ ] Evaluation of Model Prediction
 - [ ] Deploy with simple frontend
 
