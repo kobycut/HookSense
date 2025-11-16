@@ -11,6 +11,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from src.data.collectors import LocationCollector, WeatherCollector
 from src.data.dataStorage import getWeatherFeatures
+from src.models.baseline import BaselineRuleModel
+
 
 def test_location_service():
     """Test the LocationService with various locations"""
@@ -34,7 +36,7 @@ def test_weather_collector():
     print("\nTesting WeatherCollector...")
     weather_collector = WeatherCollector()
     location_collector = LocationCollector()
-    test_location = "florence"
+    test_location = "provo"
 
     try:
         lat, lon, city, state, country = location_collector.get_coordinates_from_name(test_location)
@@ -70,12 +72,23 @@ def test_dataStorage():
     except Exception as e:
         print(f"❌ Error testing DataStorage: {e}")
 
+def test_predict_with_baseline_model():
+    location_name = 'florida'
+    print("\nTesting BaselineRuleModel...")
+    try:
+        model = BaselineRuleModel(location_name)
+        score = model.predict()
+        print(f"✅ BaselineRuleModel prediction score for {location_name}: {score * 100}")
+    except Exception as e:
+        print(f"❌ Error testing BaselineRuleModel: {e}")
+
 if __name__ == "__main__":
     print("🚀 Starting LocationService Tests")
 
     # Run the tests
-    # test_location_service()
-    # test_weather_collector()
+    test_location_service()
+    test_weather_collector()
     test_dataStorage()
+    test_predict_with_baseline_model()
 
     print("\n✨ All tests completed!")

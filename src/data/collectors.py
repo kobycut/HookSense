@@ -83,10 +83,9 @@ class LocationCollector:
         return us_state_abbrev.get(state_name.lower(), state_name)
 
 class WeatherCollector:
-    def get_weather_data(self, city: str, state: str = '', country: str = ''):
+    def get_weather_data(self, city: str, state: str = '', country: str = '', date: str = datetime.today().strftime('%Y-%m-%d')):
         try:
             API_KEY = Config.VISUAL_CROSSING_API_KEY
-            todays_date = datetime.today().strftime('%Y-%m-%d')
             if state:
                 location_str = f"{city},{state}"
             elif country:
@@ -94,7 +93,7 @@ class WeatherCollector:
             else:
                 location_str = city
             elements_relevant_to_fishing = 'datetime,temp,humidity,precip,preciptype,precipprob,windspeed,cloudcover,visibility,moonphase,sunrise,sunset,uvindex,pressure,'
-            api_call = f'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location_str}/{todays_date}?unitGroup=us&key={API_KEY}&include=days&elements={elements_relevant_to_fishing}'
+            api_call = f'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location_str}/{date}?unitGroup=us&key={API_KEY}&include=days&elements={elements_relevant_to_fishing}'
             response = requests.get(api_call)
             response.raise_for_status()
             return response.json()
