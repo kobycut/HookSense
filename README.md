@@ -4,8 +4,11 @@ Machine Learning focused agent that gathers live forecast, barometric pressure, 
 ## Tech Stack
 
 Python: Easy to use Machine learning and Data Science techniques with. Libraries provide value for the prediction model.
+
 Pandas Library: Manipulate and handling essential data
+
 Numpy Library: Numerical operations
+
 Scikit-learn: Data manipulation
 
 ### Variables used and API's for each
