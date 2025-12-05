@@ -3,27 +3,30 @@ Machine Learning focused agent that gathers live forecast, barometric pressure, 
 
 ## Tech Stack
 
-**Python:** Easy to use Machine learning and Data Science techniques with. Libraries provide value for the prediction model.
+**Python:** Machine learning and Data Science techniques easily available. Libraries listed below provide value for the prediction model.
 
-**Pandas Library:** Manipulate and handling essential data
+**Pandas Library:** Manipulate and handle essential data, dataframe utility.
 
-**Numpy Library:** Numerical operations
+**Numpy Library:** Numerical operations, math etc.
 
-**Scikit-learn:** Data manipulation
+**Scikit-learn:** Data manipulation and Random Forest Regression model.
 
 ### Variables used and API's for each
-- Temperature (OpenWeather API)
-- Rainfall/precipitation (Visual Crossing API)
-- Barometric pressure (Visual Crossing API)
-- Wind speed (OpenWeather API)
-- Cloud cover (OpenWeather API)
-- Moon cycle (Visual Crossing API)
-- Historical data (NOAA CDO API)
+- **Location** (OpenWeather API)
+- **Temperature** (Visual Crossing API)
+- **Rainfall/precipitation** (Visual Crossing API)
+- **Barometric pressure** (Visual Crossing API)
+- **Wind speed** (Visual Crossing API)
+- **Cloud cover** (Visual Crossing API)
+- **Moon cycle** (Visual Crossing API)
+- **Historical data** (Visual Crossing API)
 
 ### Machine Learning Techniques
-Prediction Target: Predict whether a day is good for fishing
-Classification: Rating scale of terrible/bad/neutral/good/great/excellent
-Model Type: Rule-Based Heuristic, Cecision tree (maybe), Random Forest (if there's time)
+**Prediction Target:** Predict whether a day is good for fishing
+
+**Classification:** Rating scale of terrible/bad/neutral/good/great/excellent
+
+**Model Type:** Rule-Based Heuristic, Random Forest, another model if there's time
 
 ### Plan
 <img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/94d848d5-9d78-4b01-a707-01ced788f7e5" />
@@ -41,6 +44,7 @@ Model Type: Rule-Based Heuristic, Cecision tree (maybe), Random Forest (if there
 - [ ] Deploy with simple frontend if enough time
 
 ### How it works
+
 #### API's
 Using the VisualCrossing and OpenWeather API's the feature data is pulled in for a given date and location. Being able to change the date allows it to pull historical weather information that is used to train the Random Forest model. These API's provide the feature data for both models.
 
