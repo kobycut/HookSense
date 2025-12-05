@@ -25,6 +25,7 @@ Model Type: Rule-Based Heuristic, Cecision tree (maybe), Random Forest (if there
 ### Plan
 <img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/94d848d5-9d78-4b01-a707-01ced788f7e5" />
 
+### Actual Time Taken
 - [x] Initial Plan (1 hour)
 - [x] Tech Stack/Repo Setup (30 minutes)
 - [x] Gather Data from API's (2 1/2 hours)
