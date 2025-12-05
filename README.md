@@ -24,7 +24,7 @@ Machine Learning focused agent that gathers live forecast, barometric pressure, 
 ### Machine Learning Techniques
 **Prediction Target:** Predict whether a day is good for fishing
 
-**Classification:** Rating scale of terrible/bad/neutral/good/great/excellent
+**Classification:** Rating score out of 100, 100 being the perfect day for fishing and 0 being the worst
 
 **Model Type:** Rule-Based Heuristic, Random Forest, another model if there's time
 
