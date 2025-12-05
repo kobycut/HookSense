@@ -32,8 +32,7 @@ Model Type: Rule-Based Heuristic, Cecision tree (maybe), Random Forest (if there
 - [x] Data Exploration/Cleaning
 - [x] Feature Engineering
 - [x] Baseline Model
-- [ ] Random Forest Model
-- [ ] Another Model
-- [ ] Evaluation of Model Prediction
+- [x] Random Forest Model
+- [x] Evaluation of Model Prediction
 - [ ] Deploy with simple frontend
 
