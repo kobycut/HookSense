@@ -83,7 +83,7 @@ class LocationCollector:
         return us_state_abbrev.get(state_name.lower(), state_name)
 
 class WeatherCollector:
-    def get_weather_data(self, city: str, state: str = '', country: str = '', date: str = datetime.today().strftime('%Y-%m-%d')):
+    def get_weather_data(self, city: str, state: str = '', country: str = '', date: str = ''):
         try:
             API_KEY = Config.VISUAL_CROSSING_API_KEY
             if state:

@@ -1,11 +1,13 @@
+from datetime import datetime
 from .collectors import LocationCollector, WeatherCollector
 
 class getWeatherFeatures:
-    def __init__(self, location_name: str):
-        self.location_collector = LocationCollector()
-        self.weather_collector = WeatherCollector()
-        lat, lon, city, state, country = self.location_collector.get_coordinates_from_name(location_name)
-        self.weather_data = self.weather_collector.get_weather_data(city, state, country)
+    def __init__(self, location_name: str, date: str = datetime.today().strftime('%Y-%m-%d')):
+        location_collector = LocationCollector()
+        weather_collector = WeatherCollector()
+
+        lat, lon, city, state, country = location_collector.get_coordinates_from_name(location_name)
+        self.weather_data = weather_collector.get_weather_data(city, state, country, date)
 
     def get_date_time(self):
         return self.weather_data['days'][0]['datetime']

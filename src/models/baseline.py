@@ -1,7 +1,19 @@
 from src.data.dataStorage import getWeatherFeatures
+from datetime import datetime
+
 class BaselineRuleModel:
-    def __init__(self, location_name: str):
-        self.getWeatherFeatures = getWeatherFeatures(location_name)
+    def __init__(self, location_name: str, date: str = None):
+        """
+        Initialize baseline model with location and optional date
+
+        Args:
+            location_name: Location string like "Miami, FL"
+            date: Optional date string in 'YYYY-MM-DD' format. Defaults to today.
+        """
+        if date is None:
+            date = datetime.today().strftime('%Y-%m-%d')
+
+        self.getWeatherFeatures = getWeatherFeatures(location_name, date)
 
     def predict(self):
         score = 0

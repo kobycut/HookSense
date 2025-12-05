@@ -11,7 +11,10 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from src.data.collectors import LocationCollector, WeatherCollector
 from src.data.dataStorage import getWeatherFeatures
-from src.models.baseline import BaselineRuleModel
+from src.models.Baseline import BaselineRuleModel
+from src.models.RandomTree import RandomTreeModel
+
+location_name = 'provo'
 
 
 def test_location_service():
@@ -23,7 +26,7 @@ def test_location_service():
     location_service = LocationCollector()
 
     # Test locations
-    test_location = "oslo"
+    test_location = location_name
 
     print(f"\n🗺️  Testing location: {test_location}")
     try:
@@ -36,7 +39,7 @@ def test_weather_collector():
     print("\nTesting WeatherCollector...")
     weather_collector = WeatherCollector()
     location_collector = LocationCollector()
-    test_location = "provo"
+    test_location = location_name
 
     try:
         lat, lon, city, state, country = location_collector.get_coordinates_from_name(test_location)
@@ -48,7 +51,6 @@ def test_weather_collector():
 
 def test_dataStorage():
     print("\nTesting DataStorage...")
-    location_name = "provo"
 
     try:
         data_cleaner = getWeatherFeatures(location_name)
@@ -73,7 +75,6 @@ def test_dataStorage():
         print(f"❌ Error testing DataStorage: {e}")
 
 def test_predict_with_baseline_model():
-    location_name = 'florida'
     print("\nTesting BaselineRuleModel...")
     try:
         model = BaselineRuleModel(location_name)
@@ -81,6 +82,17 @@ def test_predict_with_baseline_model():
         print(f"✅ BaselineRuleModel prediction score for {location_name}: {score * 100}")
     except Exception as e:
         print(f"❌ Error testing BaselineRuleModel: {e}")
+
+
+def test_predict_random_tree_model():
+    print("\Testing RandomTreeModel...")
+
+    try:
+        model = RandomTreeModel(location_name)
+        score = model.predict()
+        print(f"✅ BaselineRuleModel prediction score for {location_name}: {score}")
+    except Exception as e:
+        print(f"❌ Error testing RandomTreeModel: {e}")
 
 if __name__ == "__main__":
     print("🚀 Starting LocationService Tests")
@@ -90,5 +102,6 @@ if __name__ == "__main__":
     test_weather_collector()
     test_dataStorage()
     test_predict_with_baseline_model()
+    test_predict_random_tree_model()
 
     print("\n✨ All tests completed!")
