@@ -46,16 +46,18 @@ The baseline model is a rule model that simply calculates a score based off of f
 #### Random Forest Model
 The Random Forest model has a few key steps.
 1. Generate historical data
-   - This step 
+   - Creates n samples, each sample being a baseline model instance with a random date and location.
 2. Prepare training data
-   - 
+   - Takes each sample and extracts each feature value combination and the associated total score. All of these values are appended to a dataframe. This dataframe holds all the prepared historical data.
 3. Save training data
-   - 
+   - Saves the prepared training data dataframe to a csv so that it can be used in the future to train the model.
 4. Train model
-   - 
+   - Uses RandomForestRegressor model with parameters=(estimators=100, depth=10, random state=42, jobs=1), fits the model with the saved training data and then calculates feature importance.
 5. Predict
-    - 
+    - Uses fitted model to predict score for given features of given date and location. Returns a prediction out of 100 of how good a day it is to go fishing.
 
 ### What I would do differently if I could start over
+If I could start over I would definitely spend more time gathering real fishing data and how it correlates to the given weather conditions. Having better baseline data for what makes a good fishing day would help the model make a better prediction. This data could also be used to train the Random Forest model instead of having to use the baseline model which most likely is resulting in slightly skewed data. If I could start over I would find better initial prediction data.
 ### Lessons Learned
+There are many many various factors that make a prediction model accurate. There is always more that can be done to make it more accurate. These models can get very complicated very quickly due to the amount of conditions and data they require to make a decent prediction. The Random Forest Regressor was simple enough to use once all the data was gathered, cleaned, prepared, and saved. The hard part about this assigment were the data gathering and cleaning. Using the actual model was fairly straight forward and not too difficult. Using Sklearn and Numpy as tools helped with the training and fitting the model. This was an insightful project to work on and it will be interesting to go fishing on the days my model says are the best and see the results first hand :)) 🐟🎣
 
