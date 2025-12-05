@@ -25,14 +25,25 @@ Model Type: Rule-Based Heuristic, Cecision tree (maybe), Random Forest (if there
 ### Plan
 <img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/94d848d5-9d78-4b01-a707-01ced788f7e5" />
 
-- [x] Initial Plan
-- [x] Tech Stack/Repo Setup
-- [x] Gather Data from API's
-- [x] Store Data
-- [x] Data Exploration/Cleaning
-- [x] Feature Engineering
-- [x] Baseline Model
-- [x] Random Forest Model
-- [x] Evaluation of Model Prediction
-- [ ] Deploy with simple frontend
+- [x] Initial Plan (1 hour)
+- [x] Tech Stack/Repo Setup (30 minutes)
+- [x] Gather Data from API's (2 1/2 hours)
+- [x] Store Data (1 hour)
+- [x] Data Exploration/Cleaning (3 hours)
+- [x] Feature Engineering (1 hour)
+- [x] Baseline Model (4 hours)
+- [x] Random Forest Model (6 hours)
+- [x] Evaluation of Model Prediction (1 hour)
+- [ ] Deploy with simple frontend if enough time
+
+### How it works
+#### API's
+
+#### Baseline Model
+
+#### Random Forest Model
+
+
+### What I would do differently if I could start over
+### Lessons Learned
 
