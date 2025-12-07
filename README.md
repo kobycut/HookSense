@@ -71,8 +71,9 @@ There are many many various factors that make a prediction model accurate. There
 
 ### Final Results!
 Here are some of the results:
-<img width="645" height="378" alt="image" src="https://github.com/user-attachments/assets/c982a7bf-948a-4bad-91e1-e52587337a48" />
-<img width="572" height="242" alt="image" src="https://github.com/user-attachments/assets/219441c9-5e76-44b7-90a6-012d80d63b95" />
+<img width="432" height="381" alt="image" src="https://github.com/user-attachments/assets/801b2624-a3a4-418d-8e36-bfe05ec8b068" />
+
+<img width="412" height="226" alt="image" src="https://github.com/user-attachments/assets/aa67d73f-2db2-4188-8d2a-b10b3a10c4d3" />
 
 
 
