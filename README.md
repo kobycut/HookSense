@@ -70,7 +70,8 @@ If I could start over I would definitely spend more time gathering real fishing 
 There are many many various factors that make a prediction model accurate. There is always more that can be done to make it more accurate. These models can get very complicated very quickly due to the amount of conditions and data they require to make a decent prediction. The Random Forest Regressor was simple enough to use once all the data was gathered, cleaned, prepared, and saved. The hard part about this assigment were the data gathering and cleaning. Using the actual model was fairly straight forward and not too difficult. Using Sklearn and Numpy as tools helped with the training and fitting the model. This was an insightful project to work on and it will be interesting to go fishing on the days my model says are the best and see the results first hand :)) 🐟🎣
 
 ### Final Results!
-Here are some of the results:
+Here are some of the results for Provo Utah:
+
 <img width="432" height="381" alt="image" src="https://github.com/user-attachments/assets/801b2624-a3a4-418d-8e36-bfe05ec8b068" />
 
 <img width="412" height="226" alt="image" src="https://github.com/user-attachments/assets/aa67d73f-2db2-4188-8d2a-b10b3a10c4d3" />
